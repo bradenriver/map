@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kingdom Hall Redirect</title>
+<script>
+  const lat = 27.468488;
+  const lng = -82.508261;
+
+  const ua = navigator.userAgent.toLowerCase();
+
+  if (ua.includes("iphone") || ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document)) {
+    window.location = `maps://?daddr=${lat},${lng}&dirflg=d`;
+  } else if (ua.includes("android")) {
+    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
+  } else {
+    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
+  }
+</script>
+</head>
+<body>Redirecting…</body>
+</html>
