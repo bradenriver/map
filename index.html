@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Braden River Map Link</title>
+<script>
+  // Your coordinates
+  const lat = 27.500320948101567;
+  const lng = -82.56529262414672;
+
+  const ua = navigator.userAgent.toLowerCase();
+
+  if (ua.includes("iphone") || ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document)) {
+    // iOS → Apple Maps
+    window.location = `maps://?daddr=${lat},${lng}&dirflg=d`;
+  } else if (ua.includes("android")) {
+    // Android → Google Maps
+    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
+  } else {
+    // Desktop fallback → Google Maps web
+    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
+  }
+</script>
+</head>
+<body>
+Redirecting…
+</body>
+</html>
