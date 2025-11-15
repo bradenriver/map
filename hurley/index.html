@@ -4,22 +4,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hurley Home Redirect</title>
 <script>
-  // Full written address (URL encoded)
-  const address = "3310+55th+Drive+East,+Bradenton,+FL+34203";
+// Full written address (URL encoded)
+const address = "3310+55th+Drive+East,+Bradenton,+FL+34203";
 
-  const ua = navigator.userAgent.toLowerCase();
+const ua = navigator.userAgent.toLowerCase();
 
-  if (ua.includes("iphone") || ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document)) {
-    // iOS → Apple Maps
+// iOS → Apple Maps
+if (ua.includes("iphone") || ua.includes("ipad")) {
     window.location = `maps://?daddr=${address}&dirflg=d`;
-  } else if (ua.includes("android")) {
-    // Android → Google Maps
+}
+// Android → Google Maps
+else if (ua.includes("android")) {
     window.location = `https://maps.google.com/?daddr=${address}&dirflg=d`;
-  } else {
-    // Desktop → Google Maps
+}
+// Desktop → Google Maps
+else {
     window.location = `https://maps.google.com/?daddr=${address}&dirflg=d`;
-  }
+}
 </script>
 </head>
-<body>Redirecting…</body>
+<body>Redirecting...</body>
 </html>
