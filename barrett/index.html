@@ -2,19 +2,22 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Barrett Group Meeting Redirect</title>
+<title>Barrett Home Redirect</title>
 <script>
-  const lat = 27.448590;
-  const lng = -82.455130;
+  // Full written address (URL encoded)
+  const address = "4806+Bookelia+Circle,+Bradenton,+FL+34203";
 
   const ua = navigator.userAgent.toLowerCase();
 
   if (ua.includes("iphone") || ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document)) {
-    window.location = `maps://?daddr=${lat},${lng}&dirflg=d`;
+    // iOS → Apple Maps
+    window.location = `maps://?daddr=${address}&dirflg=d`;
   } else if (ua.includes("android")) {
-    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
+    // Android → Google Maps
+    window.location = `https://maps.google.com/?daddr=${address}&dirflg=d`;
   } else {
-    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
+    // Desktop → Google Maps
+    window.location = `https://maps.google.com/?daddr=${address}&dirflg=d`;
   }
 </script>
 </head>
