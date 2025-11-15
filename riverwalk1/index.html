@@ -4,19 +4,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Riverwalk 1 Redirect</title>
 <script>
-  const lat = 27.500320948101567;
-  const lng = -82.56529262414672;
+const lat = 27.500320948101567;
+const lng = -82.56529262414672;
 
-  const ua = navigator.userAgent.toLowerCase();
+const ua = navigator.userAgent.toLowerCase();
 
-  if (ua.includes("iphone") || ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document)) {
+if (ua.includes("iphone") || ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document)) {
     window.location = `maps://?daddr=${lat},${lng}&dirflg=d`;
-  } else if (ua.includes("android")) {
+} else if (ua.includes("android")) {
     window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
-  } else {
+} else {
     window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
-  }
+}
 </script>
 </head>
-<body>Redirecting…</body>
+<body>Redirecting...</body>
 </html>
