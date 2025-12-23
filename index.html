@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Watch Video</title>
+  <title>Public CARP Witnessing Training</title>
 
   <style>
     body {
@@ -23,15 +23,28 @@
       background: #121214;
       border: 1px solid #222;
       border-radius: 14px;
-      padding: 20px;
+      padding: 24px;
     }
 
-    h1 {
-      margin: 0 0 16px 0;
-      font-size: 20px;
+    /* Title */
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    /* Video container */
+    .title h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .title .date {
+      margin-top: 6px;
+      font-size: 15px;
+      opacity: 0.8;
+    }
+
+    /* Video */
     .video-wrap {
       aspect-ratio: 16 / 9;
       background: black;
@@ -44,13 +57,17 @@
       border: none;
     }
 
-    /* Download button */
+    /* Button */
+    .button-wrap {
+      text-align: center;
+    }
+
     .download-btn {
       display: inline-block;
       background: #2ea44f;
       color: #ffffff;
       text-decoration: none;
-      padding: 14px 24px;
+      padding: 14px 28px;
       border-radius: 8px;
       font-size: 16px;
       font-weight: 600;
@@ -64,15 +81,21 @@
       margin-top: 12px;
       font-size: 13px;
       opacity: 0.75;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="card">
-      <h1>Watch Video</h1>
 
-      <!-- Google Drive video embed (this WILL play) -->
+      <!-- Centered title -->
+      <div class="title">
+        <h1>Public CARP Witnessing Training</h1>
+        <div class="date">November 15th, 2025</div>
+      </div>
+
+      <!-- Google Drive video embed -->
       <div class="video-wrap">
         <iframe
           src="https://drive.google.com/file/d/1WlIth-Ht1XdXXGAk-t4PNQZ3GqcjJ4FN/preview"
@@ -81,17 +104,20 @@
         ></iframe>
       </div>
 
-      <!-- Download button for the .jwpub file -->
-      <a
-        class="download-btn"
-        href="https://drive.google.com/uc?export=download&id=1b3TfTI8EvtmsWoJmkxCvnKjnvNdOarJt"
-      >
-        Download Form
-      </a>
+      <!-- Centered download button -->
+      <div class="button-wrap">
+        <a
+          class="download-btn"
+          href="https://drive.google.com/uc?export=download&id=1b3TfTI8EvtmsWoJmkxCvnKjnvNdOarJt"
+        >
+          Download Form
+        </a>
 
-      <div class="note">
-        The form will download as a .jwpub file.
+        <div class="note">
+          The form will download as a .jwpub file.
+        </div>
       </div>
+
     </div>
   </div>
 </body>
