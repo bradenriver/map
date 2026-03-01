@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rossi Park Redirect</title>
+<script>
+const address = "444 3rd Ave W, Bradenton, FL 34205";
+
+const ua = navigator.userAgent.toLowerCase();
+
+if (ua.includes("iphone") || ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document)) {
+    window.location = `maps://?daddr=${encodeURIComponent(address)}&dirflg=d`;
+} else if (ua.includes("android")) {
+    window.location = `https://maps.google.com/?daddr=${encodeURIComponent(address)}&dirflg=d`;
+} else {
+    window.location = `https://maps.google.com/?daddr=${encodeURIComponent(address)}&dirflg=d`;
+}
+</script>
+</head>
+<body>Redirecting...</body>
+</html>
