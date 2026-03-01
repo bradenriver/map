@@ -4,19 +4,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Red Barn Redirect</title>
 <script>
-const lat = 27.512207;
-const lng = -82.561906;
+const address = "1707 1st St, Bradenton, FL 34208";
+const encodedAddress = encodeURIComponent(address);
 
 const ua = navigator.userAgent.toLowerCase();
 
 if (ua.includes("iphone") || ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document)) {
-    window.location = `maps://?daddr=${lat},${lng}&dirflg=d`;
-} else if (ua.includes("android")) {
-    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
+    window.location = `maps://?daddr=${encodedAddress}&dirflg=d`;
 } else {
-    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
+    window.location = `https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`;
 }
 </script>
 </head>
-<body>Redirecting...</body>
+<body>
+Redirecting...
+</body>
 </html>
