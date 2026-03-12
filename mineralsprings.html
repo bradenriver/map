@@ -11,18 +11,13 @@ const lng = -82.54962971586501;
 const ua = navigator.userAgent.toLowerCase();
 
 if (ua.includes("iphone") || ua.includes("ipad") || (ua.includes("macintosh") && "ontouchend" in document)) {
-    window.location = `maps://?daddr=${lat},${lng}&dirflg=d`;
-} 
-else if (ua.includes("android")) {
-    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
-} 
-else {
-    window.location = `https://maps.google.com/?daddr=${lat},${lng}&dirflg=d`;
+    window.location.href = `http://maps.apple.com/?daddr=${lat},${lng}`;
+} else {
+    window.location.href = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
 }
 </script>
 
 </head>
-
 <body>
 Redirecting...
 </body>
